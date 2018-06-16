@@ -1,0 +1,38 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 05 - Jquery</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#divisao").children().css({
+                "font": "12pt Arial",
+                "text-align": "center",
+                "line-height": "30pt",
+                "margin": "0px auto"
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="divisao">
+
+        <p id="frase01">Prefiro perder a guerra e ganhar a paz.</p>
+        <p class="autor">Bob Marley</p>
+
+        <p id="frase02">Somos o que podemos ser!</p>
+        <p class="autor">Engenheiros do Hawaii</p>
+
+        <p id="frase03">Quando se tropeça, o proximo passo é maior.</p>
+        <p class="autor">Sertillanges</p>
+
+    </div>
+
+
+</body>
+
+</html>
