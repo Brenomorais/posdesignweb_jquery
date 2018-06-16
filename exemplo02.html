@@ -1,0 +1,80 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 02 - Jquery</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        //Função 01, que pega a tag Div e aplica estilos css e adiciona uma tag <h2> dentro de todas as tag Div
+        // .html retira todo elemento existente e adiciona o novo no lugar
+        function exemplo01() {
+            $("div").css({
+                "background-color": "#ff8808",
+                "border": "3px solid red",
+                "width": "680px",
+                "text-align": "center",
+                "margin": "0px auto"
+            });
+            $("div").html("<h2> Meu novo paragrafo.</h2>");
+        }
+
+        //Função 02. aplica estilos apenas para a class css "seletor". Adiciona mais um h2 para o seletor especificado
+        function exemplo02() {
+            $(".seletor").css({
+                "background-color": "#0897bc",
+                "border": "3px double green",
+                "width": "700px",
+                "text-align": "right",
+                "margin": "0px auto"
+            });
+            $(".seletor").append("<h2>Mais um paragrafo.</h2>");
+        }
+
+        //Função 03 aplicando css para o ID o identificador "intro"
+        function exemplo03() {
+            $("#intro").css({
+                "background-color": "#02001c",
+                "color": "white",
+                "border": "3px double green",
+                "width": "700px",
+                "text-align": "right",
+                "margin": "0px auto"
+            });
+        }
+
+        //Função 03 - função aplica  css e formação apenas para a primeira div "div:first" e coloca um texto em html
+        function exemplo04() {
+            $("div:first").css("border", "3px solid yellow");
+            $("div:first").text("<h1>Texteo em html.</h1>")
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 id="intro">Seletores e filtros</h1>
+    <div>
+        <h2>Primeiro Parágrafo</h2>
+    </div>
+
+    <h2 class="seletor">Seletor</h2>
+    <div>Segundo Parágrafo</div>
+
+    <h2 class="filtro">Filtro</h2>
+
+    <div>Outro Parágrafo</div>
+
+    <br/><br/>
+
+    <input type="button" name="exemplo1" value="Exemplo 1" onclick="exemplo01()" />
+
+    <input type="button" name="exemplo2" value="Exemplo 2" onclick="exemplo02()" />
+
+    <input type="button" name="exemplo3" value="Exemplo 3" onclick="exemplo03()" />
+
+    <input type="button" name="exemplo3" value="Exemplo 4" onclick="exemplo04()" />
+
+</body>
+
+</html>
