@@ -1,0 +1,43 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 03 - Jquery</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $("#caixa").on("mousemove", onMouseOver);
+            $("#caixa").on("click", onMouseClick);
+        });
+
+        function onMouseOver(evt) {
+            $(".resposta").text(evt.type + ":" + evt.pageX + "," + evt.pageY);
+        }
+
+        function onMouseClick(evt) {
+            $(".resposta").text(evt.type + ":" + evt.pageX + "," + evt.pageY);
+        }
+    </script>
+
+    <style>
+        #caixa {
+            border: 2px solid yellow;
+            background-color: orange;
+            min-height: 300px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Eventos no Jquery</h1>
+
+    <div id="caixa"></div>
+
+    <p class="resposta" style="text-align: center; color: red;"></p>
+</body>
+
+</html>
