@@ -1,0 +1,50 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 04 - Jquery</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function() {
+            $("#botao").click(function() {
+                $("#divisao")
+                    .animate({
+                        width: 400
+                    }, 300)
+                    .animate({
+                        height: 300
+                    }, 400)
+                    .animate({
+                        left: 500
+                    }, 500)
+                    .animate({
+                        borderRadius: 300
+                    }, "fast")
+            });
+        });
+    </script>
+
+    <style>
+        #divisao {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Animações em Jquery</h1>
+
+    <button id="botao">Animar</button>
+
+    <div id="divisao"></div>
+
+</body>
+
+</html>
