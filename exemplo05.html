@@ -6,6 +6,7 @@
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 
     <script type="text/javascript">
+        //Função que aplica css na div quando pagina html estiver carregada
         $(document).ready(function() {
             $("#divisao").children().css({
                 "font": "12pt Arial",
@@ -13,6 +14,21 @@
                 "line-height": "30pt",
                 "margin": "0px auto"
             });
+
+            //Procura na div "divisao" pela class "autor" se encontar aplica o css.
+            $("#divisao").find(".autor").css({
+                "color": "red",
+                "font-style": "italic"
+            });
+
+            //Pega elemento anteiror ao autor que e no caso as frases e aplica o css
+            var elemento = $(".autor");
+            elemento.prev().css({
+                "background-color": "gray",
+                "color": "white"
+            });
+
+            elemento.parents().css("border", "2px dotted red");
         });
     </script>
 </head>
