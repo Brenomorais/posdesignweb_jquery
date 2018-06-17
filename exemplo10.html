@@ -1,0 +1,114 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10 - Jquery e Jquery UI</title>
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="jqueryui/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.css" />
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.css" />
+
+    <script type="text/javascript">
+        $(function() {
+            $("#accordion").accordion();
+
+            $("#mensagem").dialog({
+                resizable: false,
+                height: 200,
+                modal: true,
+                buttons: {
+                    "Enviar": function() {
+                        $(this).dialog("close");
+                    },
+                    "Cancelar": function() {
+                        $(this).dialog("close");
+                    },
+                }
+            });
+
+            $("#campodata").datepicker();
+
+
+        });
+    </script>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        .box {
+            border: 3px solid gray;
+            background-color: #c0c0c0;
+            font-size: 12px;
+            min-height: 550px;
+            width: 1100px;
+            text-align: justify;
+            padding: 10px;
+            z-index: 0;
+            margin: 0px auto;
+        }
+        
+        #conteudo {
+            width: 600px;
+            height: 530px;
+            margin: 0px auto;
+            background-color: white;
+            padding-top: 10px;
+        }
+        
+        #accordion {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mensagem" title="Título da mensagem Aqui!!">
+        <p>Exemplo de uma caixa de Mensagem!</p>
+    </div>
+
+    <div class="box">
+        <div id="conteudo">
+            <div id="accordion">
+                <h3>Seção 1</h3>
+                <div>
+                    <p>
+                        <label for="Cursos">Digite seu nome: </label>
+                        <input id="Cursos">
+                        <p>
+                            <label for="campodata">Data de Nascimento:</label>
+                            <input type="text" name="Data" id="campodata">
+                        </p>
+                        <button id="enviar">Enviar</button>
+                    </p>
+                </div>
+                <h3>Seção 2</h3>
+                <div>
+                    <p>
+                        Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção
+                        2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2 Seção 2
+                    </p>
+                </div>
+                <h3>Seção 3</h3>
+                <div>
+                    <p>
+                        Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção
+                        3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3 Seção 3
+                    </p>
+                </div>
+                <h3>Seção 4</h3>
+                <div>
+                    <p>
+                        Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção
+                        4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4 Seção 4
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
