@@ -1,0 +1,85 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 06 - Jquery</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //Oculta o autor
+            $("#hide").click(function() {
+                $("#autor").hide();
+            });
+
+            //Exibe o autor
+            $("#show").click(function() {
+                $("#autor").show();
+            });
+
+            //Exibe o texto se tiver oculto e oculta se tiver exibindo
+            $("#change").click(function() {
+                $("#texto").toggle();
+            });
+        });
+    </script>
+
+    <style>
+        #titulo {
+            font: 20pt verdana;
+            text-align: center;
+            background-color: blueviolet;
+        }
+        
+        #autor {
+            font: bold 12pt arial;
+            text-align: center;
+        }
+        
+        #texto {
+            font: 14pt Times New Roman;
+            text-align: center;
+        }
+        
+        #show,
+        #change {
+            position: absolute;
+            left: 950px;
+            top: 110px;
+            margin: 0px;
+            padding: 5px;
+        }
+        
+        #change {
+            top: 600px;
+        }
+        
+        #hide {
+            position: absolute;
+            left: 1020px;
+            top: 110px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="titulo">Soneto de Fidelidade</p>
+    <p id="autor">(Vinicius de Moraes)</p>
+
+    <button id="show"> + Autor</button>
+    <button id="hide"> - Autor</button>
+
+    <div id="texto">
+
+        De tudo, ao meu amor serei atento antes <br/> E com tal zelo, e sempre, e tanto <br/> Que mesmo em face do maior encanto <br/> Dele se encante mais meu pensamento <br/><br/> Quero vivê-lo em cada vão momento <br/> E em seu louvor hei de espalhar
+        meu canto <br/> E rir meu riso e derramar meu pranto <br/> Ao seu pesar ou seu contentamento <br/><br/> E assim quando mais tarde me procure <br/> Quem sabe a morte, angústia de quem vive <br/> Quem sabe a solidão, fim de quem ama <br/><br/> Eu
+        possa lhe dizer do amor (que tive): <br/> Que não seja imortal, posto que é chama <br/> Mas que seja infinito enquanto dure <br/><br/>
+
+    </div>
+
+    <button id="change">Mostrar/Ocultar Poema</button>
+
+</body>
+
+</html>
