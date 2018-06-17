@@ -1,0 +1,100 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 09 - Jquery</title>
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <!--jQUERY UI possui recursos para integragir com a interface -->
+    <script type="text/javascript" src="jqueryui/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $(iniciar);
+
+        function iniciar() {
+
+            //Função quando arrasta
+            $("#arrastar").draggable({
+                cursor: 'pointer',
+                snap: '#soltar',
+                containment: '#divisao'
+            });
+
+            //Função quando solta
+            $("#soltar").droppable({
+                drop: OK,
+                out: OFF
+            });
+        }
+
+        function OK() {
+            $("#resposta").text("OK!");
+            $("#soltar").css("background-color", "black");
+        }
+
+        function OFF() {
+            $("#resposta").text("Objeto fora do lugar!");
+            $("#soltar").css("background-color", "red");
+        }
+    </script>
+
+    <style>
+        .fundo {
+            border: 2px solid black;
+            background-image: linear-gradient(to bottom, white, purple);
+            margin: 0px auto;
+            min-height: 550px;
+            width: 900px;
+        }
+        
+        #arrastar {
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            background-color: #ffffff;
+            text-align: center;
+            color: purple;
+            font: bold 12pt arial;
+            z-index: 1;
+        }
+        
+        #soltar {
+            width: 170px;
+            height: 170px;
+            background-color: red;
+            color: white;
+            position: absolute;
+            left: 950px;
+            top: 350px;
+            text-align: center;
+        }
+        
+        #resposta {
+            width: 900px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            position: absolute;
+            left: 233px;
+            top: 530px;
+            text-align: center;
+        }
+        
+        #arrastar.ui-draggable-dragging {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="divisao" class="fundo">
+        <div id="arrastar"><br/><br/>Arraste...</div>
+        <div id="soltar"><br/><br/>Solte aqui...</div>
+        <div id="resposta">Objeto fora do lugar!</div>
+    </div>
+
+</body>
+
+</html>
